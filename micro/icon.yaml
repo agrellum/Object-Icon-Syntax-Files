@@ -1,0 +1,267 @@
+filetype: Icon
+
+detect:
+    filename: "(\\.icn$)"
+
+rules:
+
+    # operators
+    - brightmagenta: "[=\\+\\-\\*/<>@~&%\\|!\\?\\^\\.:\\\\]+"
+
+    # precedence/associativity/usage
+
+    # !
+    # 12 unary with string, list
+    # 11 binary left with other
+
+    # %
+    #  9 binary left witn numeric
+
+    # &
+    #  1 binary left with other
+
+    # *
+    # 12 unary with string, cset, list, co-expression
+    #  9 binary left with numeric
+
+    # **
+    #  9 binary left with cset, set
+
+    # +
+    #  9 binary left with numeric
+    #  8 binary left with numeric
+
+    # ++
+    #  8 binary left with cset, set
+
+    # -
+    # 12 unary with numeric
+    #  8 binary left with numeric
+
+    # --
+    #  8 binary left with cset, set
+
+    # .
+    # 12 unary with other
+
+    # /
+    # 12 unary with other
+    #  9 binary left with numeric
+
+    # :=
+    #  3 binary right with other
+
+    # :=:
+    #  3 binary right with other
+
+    # <
+    #  6 binary left with numeric
+
+    # <-
+    #  3 binary right with other
+
+    # <->
+    #  3 binary right with other
+
+    # <<
+    #  6 binary left with string
+
+    #  <<=
+    #  6 binary left with string
+
+    # <=
+    #  6 binary left with numeric
+
+    # =
+    # 12 unary with string
+    #  6 binary left with numeric
+
+    # ==
+    #  6 binary left with string
+
+    # ===
+    #  6 binary left with other
+
+    # >
+    #  6 binary left with numeric
+
+    # >=
+    #  6 binary left with numeric
+
+    # >>
+    #  6 binary left with string
+
+    # >>=
+    #  6 binary left with string
+
+    # ?
+    # 12 unary with numeric, string, list
+    #  2 binary left with string
+
+    # @
+    # 12 unary with co-expression
+    # 11 binary left with co-expression
+
+    # \
+    # 12 unary with other
+    # 11 binary left with other
+
+    # ^
+    # 12 unary with co-expression
+    # 10 binary right with numeric
+
+    # e1_to_e2
+    #  4 left, binary or ternary with other
+
+    # e1_to_e2_by_e3
+    #  4 left, binary or ternary with other
+
+    # not
+    # 12 unary with other
+
+    # op:=
+    #  3 binary right other
+
+    # |
+    # 12 unary with other
+    #  5 binary left with other
+
+    # ||
+    #  7 binary left with string
+
+    # |||
+    #  7 binary left with list
+
+    # ~
+    # 12 unary with cset
+
+    # ~=
+    #  6 binary left with numeric
+
+    # ~==
+    #  6 binary left with string
+
+    # ~===
+    #  6 binary left with other
+
+    # enclosing symbols
+    - brightcyan: "[(){}]|\\[|\\]"
+
+    # other symbols
+    - brightcyan: ([,;])
+
+    # colorize names of class, procedure, record and method.
+    # reset class/procedure/record/method color below
+    - yellow: "class +[A-Za-z0-9|_]+ *( +[A-Za-z0-9.]+)?"
+    - yellow: "procedure +[A-Za-z0-9|_]+ *( +[A-Za-z0-9.]+)?"
+    - yellow: "record +[A-Za-z0-9|_]+ *( +[A-Za-z0-9.]+)?"
+    - yellow: "method +[A-Za-z0-9|_]+ *( +[A-Za-z0-9.]+)?"
+
+    # firsts
+    - brightred: "\\b(import|initial|invocable)\\b"
+
+    # code blocks, field modifiers
+    - brightred: "(?i)\\b(class|procedure|record|method)\\b"
+    - brightred: "(?i)\\b(abstract|const|end|final|global|local|native)\\b"
+    - brightred: "(?i)\\b(optional|override|package|private|protected)\\b"
+    - brightred: "(?i)\\b(public|readable|static)\\b"
+
+    # flow/other
+    - brightred: "(?i)\\b(break|by|case|catch|continue|create|default|do|else)\\b"
+    - brightred: "(?i)\\b(every|extends|fail|if|lambda|link|main|next|nil|not)\\b"
+    - brightred: "(?i)\\b(of|repeat|return|select|succeed|suspend|then|to)\\b"
+    - brightred: "(?i)\\b(unless|until|while|with|yield)\\b"
+
+    # builtin functions
+    - yellow: "(?i)\\b(abs|acos|any|asin|atan|back|bal|center|char)\\b"
+    - yellow: "(?i)\\b(chdir|classof|clear|close|coact|cocopy|cofail)\\b"
+    - yellow: "(?i)\\b(collect|copy|cos|cset|delay|delete|detab)\\b"
+    - yellow: "(?i)\\b(display|dtor|entab|errorclear|exit|exp)\\b"
+    - yellow: "(?i)\\b(fatalerr|find|flush|function|get|getch|getche)\\b"
+    - yellow: "(?i)\\b(getenv|iand|icom|image|insert|integer|ior|is)\\b"
+    - yellow: "(?i)\\b(ishift|ixor|kbhit|key|keyof|keyval|left|list)\\b"
+    - yellow: "(?i)\\b(log|many|map|match|max|member|min|move|name)\\b"
+    - yellow: "(?i)\\b(numeric|open|ord|pop|pos|proc|pull|push|put)\\b"
+    - yellow: "(?i)\\b(read|reads|real|remove|rename|repl|reverse)\\b"
+    - yellow: "(?i)\\b(right|rtod|runerr|seek|seq|serial|set|sin)\\b"
+    - yellow: "(?i)\\b(sort|sortf|sqrt|stop|string|syserr|system|tab)\\b"
+    - yellow: "(?i)\\b(table|tan|text|trim|type|uchar|ucs|upto)\\b"
+    - yellow: "(?i)\\b(variable|weakref|weakrefval|where|write|writes)\\b"
+
+    # preprocessor
+    - brightmagenta: "\\$\\{?[A-Za-z]+\\}?"
+
+    # keywords
+    - brightred: "\\&\\{?[A-Za-z]+\\}?"
+
+    # strings using double quote character
+    - green:
+        start: "\""
+        end: "\""
+        skip: "\\\\."
+        rules:
+            # escape sequences
+            - cyan: "\\\\([bdeflnrtvN]|'|\\\"|\\\\)"
+            # highlight numbers inside string
+            - cyan: "\\b[+-]?([0-9]+(\\.[0-9]+)?|\\.[0-9]+|\\.)([eE][+-]?[0-9]+)?[i]?\\b"
+            # highlight binary number inside string
+            - cyan: "\\b(([0-9])+([bB])+([0-1]+))\\b"
+            # highlight radix number inside string
+            - cyan: "\\b(([0-9])+([rR])+([0-9a-zA-Z]+))\\b"
+            # highlight hex number inside string
+            - cyan: "\\\\x[A-Fa-f0-9]{2}"
+            - cyan: "\\b(([0-9])+([xX])+([A-Fa-f0-9]+))\\b"
+            # highlight unicode number inside string
+            - cyan: "\\\\[u][A-Fa-f0-9]{4}"
+            - cyan: "\\\\[U][A-Fa-f0-9]{6}"
+            - cyan: "\\\\."
+
+    #  strings using single quote character
+    - green:
+        start: "\'"
+        end: "\'"
+        skip: "\\\\."
+        rules:
+            # escape sequences
+            - cyan: "\\\\([bdeflnrtvN]|'|\\\"|\\\\)"
+            # highlight numbers inside string
+            - cyan: "\\b[+-]?([0-9]+(\\.[0-9]+)?|\\.[0-9]+|\\.)([eE][+-]?[0-9]+)?[i]?\\b"
+            # highlight binary number inside string
+            - cyan: "\\b(([0-9])+([bB])+([0-1]+))\\b"
+            # highlight radix number inside string
+            - cyan: "\\b(([0-9])+([rR])+([0-9a-zA-Z]+))\\b"
+            # highlight hex number inside string
+            - cyan: "\\\\x[A-Fa-f0-9]{2}"
+            # highlight unicode number inside string
+            - cyan: "\\\\[u][A-Fa-f0-9]{4}"
+            - cyan: "\\\\[U][A-Fa-f0-9]{6}"
+            - cyan: "\\\\."
+
+    # escape sequences
+    # SKIP USING THEM OUTSIDE OF QUOTES
+    # Keep ICON's use of \(non-null test) easy to see.
+    #- cyan: "\\\\([bdeflnrtv]|'|\\\"|\\\\)"
+
+    # numbers
+    - cyan: "\\b[+-]?([0-9]+(\\.[0-9]+)?|\\.[0-9]+|\\.)([eE][+-]?[0-9]+)?[i]?\\b"
+
+    # binary
+    - cyan: "\\b(([0-9])+([bB])+([0-1]+))\\b"
+
+    # highlight radix number inside string
+    - cyan: "\\b(([0-9])+([rR])+([0-9a-zA-Z]+))\\b"
+
+    # hex
+    - cyan: "\\\\x[A-Fa-f0-9]{2}"
+
+    # unicode
+    - cyan: "\\\\u[A-Fa-f0-9]{4}"
+    - cyan: "\\\\U[A-Fa-f0-9]{6}"
+
+    # comments
+    - brightblue:
+        start: "#"
+        end: "$"
+        rules:
+            - todo: "(TODO|XXX|FIXME):?"
+
