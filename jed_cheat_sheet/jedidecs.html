@@ -1,0 +1,965 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+		"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>JED IDE Mode Cheat Sheet</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="Gnumeric 1.12.46 via GPFH/0.5">
+<style type="text/css">
+tt {
+	font-family: courier;
+}
+td {
+	font-family: helvetica, sans-serif;
+}
+caption {
+	font-family: helvetica, sans-serif;
+	font-size: 14pt;
+	text-align: left;
+}
+</style>
+</head>
+<body>
+<p></p><table cellspacing="0" cellpadding="3">
+<caption>JED IDE Mode Key Sequences</caption>
+<tr>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Choice 1</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Choice 2</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Choice 3</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Choice 1</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Choice 2</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Choice 3</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>EXIT, STOP OR UNDO</b></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">    </td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">    </td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>WINDOW</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF0000;">exit_jed</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF0000;">Ctrl-K X</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">ide_goto_top_of_window</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">Ctrl-Q E</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">ESC Ctrl-E</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF0000;">kbd_quit</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF0000;">Ctrl-G</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF0000;">ESC ESC ESC</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">ide_goto_middle_of_window</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">Ctrl-Q M</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF0000;">undo</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF0000;">Ctrl-U</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF0000;">Ctrl-_</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">ide_goto_bottom_of_window</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">Ctrl-Q X</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">ESC Ctrl-X</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>MENU and HELP</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">ide_page_down</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">PgDn</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">Ctrl-C</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">select_menubar</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">F10</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">F8</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">ESC m</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">ide_page_up</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">PgUp</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">Ctrl-R</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">open_menubar_F10</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">ESC o</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">ide_window_down</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">ESC Z</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">open_menubar_File</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">ESC f</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">ide_window_up</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">Ctrl-W</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">open_menubar_Edit</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">ESC e</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">split_window</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">Alt-F5</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">open_menubar_Search</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">ESC s</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">other_window</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">Ctrl-K O</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">open_menubar_Buffers</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">ESC b</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">ide_goto_prev</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">Ctrl-Q P</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">ESC Ctrl-P</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">open_menubar_Windows</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">ESC i</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">one_window</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">F5</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">Ctrl-K I</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003366;">Ctrl-K TAB</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">open_menubar_System</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">ESC y</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>BUFFERS</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">open_menubar_Help</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">ESC h</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">beg_of_buffer</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">ESC &lt;</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">help_prefix</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">Ctrl-H</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">ESC ?</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">end_of_buffer</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">ESC &gt;</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">ide_better_help</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800000;">F1</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">ide_next_buffer_0</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">Ctrl-K P</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>CHARACTER</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">ide_next_buffer_1</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">F6</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">Ctrl-K N</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">backward_delete_char</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">BS</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">ide_save_buffer</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">Ctrl-K S</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">delete_char_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">ESC g</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">Del</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">kill_buffer</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">Ctrl-K Q</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">Alt-F3</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">ide_next_char_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">Right</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">Ctrl-D</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">list_buffers</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">ESC 0</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">next_char_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">ESC [ C</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">save_buffer</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">F2</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#333300;">Ctrl-K D</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">ide_previous_char_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">Left</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">Ctrl-S</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>BLOCKS</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">previous_char_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">ESC [ D</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ide_begin_block</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Ctrl-K B</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">digit_arg 0 thru 9</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">ESC [0-9]</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ide_bob</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Ctrl-Q R</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ESC Ctrl-R</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">ide_insert_any_char</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">Ctrl-P</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ide_clear_block</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Ctrl-K H</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">insert_simulated_tab</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">TAB</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ide_copy_block</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Ctrl-K C</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">quoted_insert</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">`</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">Ctrl-Q Ctrl-Q</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ide_delete_block</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Ctrl-K Y</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">ide_toggle_case</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">Ctrl-Q T</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">ESC Ctrl-T</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ide_eob</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Ctrl-Q C</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ESC Ctrl-C</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">ide_toggle_overwrite</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#808000;">Ins</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ide_goto_begin_block</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Ctrl-Q B</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ESC Ctrl-B</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>WORD</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ide_goto_end_block</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Ctrl-Q K</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ESC Ctrl-K</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ide_select_word</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">Ctrl-K T</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">ide_void_block</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">Ctrl-K K</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ide_skip_word</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">Ctrl-F</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>REGION</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">skip_word</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ESC ESC [ C</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#3366FF;">ide_lowercase_region</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#3366FF;">Ctrl-K L</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">bskip_word</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ESC ESC [ D</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#3366FF;">ide_uppercase_region</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#3366FF;">Ctrl-K U</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ide_bskip_word</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">Ctrl-A</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#3366FF;">ide_filter_region</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#3366FF;">Ctrl-K /</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ide_bdelete_word</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ESC t</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">Alt-BS</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#3366FF;">comment_region</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#3366FF;">Ctrl-K ;</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ide_delete_word</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">Ctrl-T</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#3366FF;">uncomment_region</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#3366FF;">Ctrl-K :</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">capitalize_word</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ESC c</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#3366FF;">write_region</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#3366FF;">Ctrl-K W</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">downcase_word</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ESC l</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>PARAGRAPH</b></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">    </td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;">    </td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">upcase_word</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ESC u</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008080;">narrow_paragraph</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008080;">ESC N</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ispell</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">F7</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF6600;">ESC $</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008080;">format_paragraph</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008080;">ESC Q</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008080;">Ctrl-B</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>LINE</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>FILE</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ide_bol</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Home</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Ctrl-Q S</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ESC Ctrl-S</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#0000FF;">ide_insert_file</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#0000FF;">Ctrl-K R</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ide_eol</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">End</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ESC Ctrl-D</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Ctrl-Q D</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#0000FF;">ide_open_file_at_cursor</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#0000FF;">ESC RET</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">center_line</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ESC S</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#0000FF;">find_file</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#0000FF;">F3</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#0000FF;">Ctrl-K E</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ide_next_line_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Down</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Ctrl-X</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>MACRO</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">next_line_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ESC [ B</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#993366;">begin_macro</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#993366;">ESC (</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ide_previous_line_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Up</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Ctrl-E</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#993366;">end_macro</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#993366;">ESC )</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">previous_line_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ESC [ A</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#993366;">execute_macro</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#993366;">ESC r</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">delete_line</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Ctrl-Y</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#993366;">suspend</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#993366;">Ctrl-K Z</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">kill_line</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Ctrl-Q Y</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ESC Ctrl-Y</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>COMMAND</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">newline_and_indent</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">RET</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">do_shell_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">ESC !</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ide_goto_line_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ESC TAB</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Ctrl-Q I</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Ctrl-Q TAB</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">evaluate_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">ESC X</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">trim_whitespace</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">ESC \</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>EMACS</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">comment_line</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Ctrl-Z ;</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">emacs_escape_x</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">ESC x</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">uncomment_line</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#000080;">Ctrl-Z :</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>CODING</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>SEARCH</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">compile</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">F9</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF00FF;">goto_match</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF00FF;">Ctrl-\</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">compile_parse_errors</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">Ctrl-Z '</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">Alt-F8</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF00FF;">ide_repeat_search</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF00FF;">Ctrl-L</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">compile_previous_error</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">Ctrl-Z ,</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">Alt-F7</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF00FF;">ide_replace_cmd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF00FF;">Ctrl-Q A</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF00FF;">ESC Ctrl-A</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">ctags_popup_tag</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">ESC .</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF00FF;">ide_search_forward</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF00FF;">Ctrl-Q F</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF00FF;">ESC Ctrl-F</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">dabbrev</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">ESC /</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#008000;">Ctrl-V</td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>REGISTER</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#003300;"><b>BOOKMARK</b></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">reg_copy_to_register</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">Ctrl-K G</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">ide_set_mark  0 thru 9</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">Ctrl-K  [0-9]</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">reg_insert_register</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">Ctrl-K J</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">ide_goto_mark 0 thru 9</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#800080;">Ctrl-Q [0-9]</td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+<td  style=""></td>
+</tr>
+</table>
+<p></p><table cellspacing="0" cellpadding="3">
+<caption>Inserting Special Characters</caption>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;"><b>ASCII</b></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#0000FF;">Ctrl-P ###</td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF0000;">each # is a digit 0 to 9</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt;"><b>UNICODE</b></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#0000FF;">ESC ####` </td>
+<td  style=""></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; color:#FF0000;">&lt; last character is a backtick</td>
+</tr>
+</table>
+<p></p><table cellspacing="0" cellpadding="3">
+<caption>Notes:</caption>
+<tr>
+<td  valign="bottom"  align="center"  style=" font-size:10pt;"><b>Not all possible key sequences are listed.</b></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="center"  style=" font-size:10pt;"><b>Menu items and other Functions may provide others.</b></td>
+</tr>
+</table>
+<p>
+<a href="http://validator.w3.org/check?uri=referer"><img
+  src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+</p>
+</body>
+</html>
