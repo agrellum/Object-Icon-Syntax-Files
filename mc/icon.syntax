@@ -1,0 +1,251 @@
+# Object Icon syntax file
+
+
+context default
+
+    keyword whole $line brightmagenta
+    keyword whole $include brightmagenta
+    keyword whole $load brightmagenta
+    keyword whole $uload brightmagenta
+    keyword whole $define brightmagenta
+    keyword whole $undef brightmagenta
+    keyword whole $if brightmagenta
+    keyword whole $elsif brightmagenta
+    keyword whole $else brightmagenta
+    keyword whole $endif brightmagenta
+    keyword whole $encoding brightmagenta
+    keyword whole $error brightmagenta
+
+    keyword whole &ascii brightred
+    keyword whole &break brightred
+    keyword whole &clock brightred
+    keyword whole &cset brightred
+    keyword whole &current brightred
+    keyword whole &date brightred
+    keyword whole &dateline brightred
+    keyword whole &digits brightred
+    keyword whole &dump brightred
+    keyword whole &errorcoexpr brightred
+    keyword whole &errornumber brightred
+    keyword whole &errortext brightred
+    keyword whole &errorvalue brightred
+    keyword whole &fail brightred
+    keyword whole &features brightred
+    keyword whole &file brightred
+    keyword whole &handler brightred
+    keyword whole &host brightred
+    keyword whole &lcase brightred
+    keyword whole &letters brightred
+    keyword whole &level brightred
+    keyword whole &line brightred
+    keyword whole &main brightred
+    keyword whole &maxlevel brightred
+    keyword whole &no brightred
+    keyword whole &null brightred
+    keyword whole &pos brightred
+    keyword whole &progname brightred
+    keyword whole &random brightred
+    keyword whole &source brightred
+    keyword whole &subject brightred
+    keyword whole &time brightred
+    keyword whole &trace brightred
+    keyword whole &ucase brightred
+    keyword whole &uset brightred
+    keyword whole &version brightred
+    keyword whole &why brightred
+    keyword whole &yes brightred
+
+    keyword whole abstract brightred
+    keyword whole break brightred
+    keyword whole by brightred
+    keyword whole case brightred
+    keyword whole class brightred
+    keyword whole const brightred
+    keyword whole create brightred
+    keyword whole default brightred
+    keyword whole do brightred
+    keyword whole else brightred
+    keyword whole end brightred
+    keyword whole every brightred
+    keyword whole fail brightred
+    keyword whole final brightred
+    keyword whole global brightred
+    keyword whole if brightred
+    keyword whole import brightred
+    keyword whole initial brightred
+    keyword whole invocable brightred
+    keyword whole link brightred
+    keyword whole local brightred
+    keyword whole native brightred
+    keyword whole next brightred
+    keyword whole not brightred
+    keyword whole of brightred
+    keyword whole optional brightred
+    keyword whole override brightred
+    keyword whole package brightred
+    keyword whole private brightred
+    keyword whole procedure brightred
+    keyword whole protected brightred
+    keyword whole public brightred
+    keyword whole readable brightred
+    keyword whole record brightred
+    keyword whole repeat brightred
+    keyword whole return brightred
+    keyword whole static brightred
+    keyword whole succeed brightred
+    keyword whole suspend brightred
+    keyword whole then brightred
+    keyword whole to brightred
+    keyword whole unless brightred
+    keyword whole until brightred
+    keyword whole while brightred
+
+    keyword whole abs yellow
+    keyword whole any yellow
+    keyword whole back yellow
+    keyword whole bal yellow
+    keyword whole center yellow
+    keyword whole char yellow
+    keyword whole classof yellow
+    keyword whole clear yellow
+    keyword whole coact yellow
+    keyword whole cocopy yellow
+    keyword whole cofail yellow
+    keyword whole collect yellow
+    keyword whole copy yellow
+    keyword whole cset yellow
+    keyword whole delay yellow
+    keyword whole delete yellow
+    keyword whole detab yellow
+    keyword whole display yellow
+    keyword whole entab yellow
+    keyword whole errorclear yellow
+    keyword whole exit yellow
+    keyword whole fatalerr yellow
+    keyword whole find yellow
+    keyword whole get yellow
+    keyword whole iand yellow
+    keyword whole icom yellow
+    keyword whole image yellow
+    keyword whole insert yellow
+    keyword whole integer yellow
+    keyword whole ior yellow
+    keyword whole is yellow
+    keyword whole ishift yellow
+    keyword whole ixor yellow
+    keyword whole key yellow
+    keyword whole keyof yellow
+    keyword whole keyval yellow
+    keyword whole left yellow
+    keyword whole list yellow
+    keyword whole many yellow
+    keyword whole map yellow
+    keyword whole match yellow
+    keyword whole max yellow
+    keyword whole member yellow
+    keyword whole min yellow
+    keyword whole move yellow
+    keyword whole numeric yellow
+    keyword whole ord yellow
+    keyword whole pop yellow
+    keyword whole pos yellow
+    keyword whole proc yellow
+    keyword whole pull yellow
+    keyword whole push yellow
+    keyword whole put yellow
+    keyword whole real yellow
+    keyword whole repl yellow
+    keyword whole reverse yellow
+    keyword whole right yellow
+    keyword whole runerr yellow
+    keyword whole seq yellow
+    keyword whole serial yellow
+    keyword whole set yellow
+    keyword whole sort yellow
+    keyword whole sortf yellow
+    keyword whole string yellow
+    keyword whole syserr yellow
+    keyword whole system yellow
+    keyword whole tab yellow
+    keyword whole table yellow
+    keyword whole text yellow
+    keyword whole trim yellow
+    keyword whole type yellow
+    keyword whole uchar yellow
+    keyword whole ucs yellow
+    keyword whole upto yellow
+    keyword whole weakref yellow
+    keyword whole weakrefval yellow
+
+    #=========================
+    # Special symbols
+    keyword ! magenta
+    keyword % magenta
+    keyword & magenta
+    keyword \* magenta
+    keyword \+ magenta
+    keyword - magenta
+    keyword \. magenta
+    keyword / magenta
+    keyword : magenta
+    keyword < magenta
+    keyword = magenta
+    keyword > magenta
+    keyword ? magenta
+    keyword @ magenta
+    keyword \\ magenta
+    keyword ^ magenta
+    keyword | magenta
+    keyword ~ magenta
+
+    #=========================
+    # Separators
+    keyword ( brightcyan
+    keyword ) brightcyan
+    keyword [ brightcyan
+    keyword ] brightcyan
+    keyword { brightcyan
+    keyword } brightcyan
+    keyword , brightcyan
+    keyword ; brightcyan
+
+    #=========================
+    # Numbers
+    wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_.
+
+    keyword whole 0\{xX\}\{0123456789abcdefABCDEF\}\[0123456789abcdefABCDEF\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\] brightgreen
+    keyword whole \[0123456789\]\.\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\.\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\{eE\}\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\{eE\}\{\-\+\}\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\.\{0123456789\}\[0123456789\]\{eE\}\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\.\{0123456789\}\[0123456789\]\{eE\}\{\-\+\}\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\{rR\}\{abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\] brightgreen
+
+
+context linestart # \n brown
+    spellcheck
+
+context # \n brown
+    spellcheck
+
+    
+# char, raw string, string
+context ' ' green
+	keyword \\\{bdeflnrtv\'\"\\\N} brightgreen
+	keyword \\^\{c} brightgreen
+	keyword \\\{0123\}\{01234567\}\{01234567\} brightgreen
+	keyword \\x\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\} brightgreen
+	keyword \\u\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\} brightgreen
+	keyword \\U\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\} brightgreen
+context ` ` green
+context " " green
+	spellcheck
+	keyword \\\{bdeflnrtv\'\"\\\N} brightgreen
+	keyword \\^\{c} brightgreen
+	keyword \\\{0123\}\{01234567\}\{01234567\} brightgreen
+	keyword \\x\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\} brightgreen
+	keyword \\u\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\} brightgreen
+	keyword \\U\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\} brightgreen
+

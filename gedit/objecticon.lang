@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Object Icon Syntax File
+-->
+<language id="objecticon" name="Object Icon" version="2.0" _section="Source">
+  <metadata>
+    <property name="mimetypes">text/icn</property>
+    <property name="globs">*.icn</property>
+    <property name="continuation">_</property>
+    <property name="line-comment-start">#</property>
+  </metadata>
+
+  <styles>
+    <style id="escaped-character" name="Escaped Character" map-to="def:special-char" />
+    <style id="line-comment" name="Comment" map-to="def:comment" />
+    <style id="string" name="String" map-to="def:string" />
+    <style id="char" name="Character" map-to="def:character" />
+    <style id="radix" name="Number" map-to="def:number" />
+    <style id="real"        name="Real"        map-to="def:floating-point"/>
+    <style id="integer" name="Integer" map-to="def:number" />
+    <style id="preprocessor" name="Preprocessor" map-to="def:preprocessor" />
+    <style id="builtin-keywords" name="Builtin Keywords" map-to="def:keyword" />
+    <style id="reserved-words" name="Reserved Words" map-to="def:keyword" />
+    <style id="builtin-functions" name="Builtin Functions" map-to="def:builtin" />
+  </styles>
+
+  <definitions>
+
+    <define-regex id="escaped-character" extended="true">
+      \\( # begin with leading backslash
+      [\\\"\'bdeflnrtvN] | # single character escape sequences
+      \^c | # Control C
+      [0-7]{1,3} | # octal code, 1-3 digits
+      [x][0-9A-Fa-f]{1,2} | # hexadecimal code, 1 or 2 digits
+      [u][0-9A-Fa-f]{1,4} | # unicode 1-4 hexadecimal digits
+      [U][0-9A-Fa-f]{1,6} # unicode 1-6 hexadecimal digits
+      )
+    </define-regex>
+
+    <context id="line-comment" style-ref="line-comment" end-at-line-end="true" class="comment" class-disabled="no-spell-check">
+      <start>#</start>
+        <include>
+          <context ref="def:in-comment" />
+        </include>
+    </context>
+
+    <context id="line-continue">
+      <start>(\_)(\s)*?$</start>
+      <end>^</end>
+    </context>
+
+    <context id="string" style-ref="string" end-at-line-end="true" class="string" class-disabled="no-spell-check">
+      <start>["']</start>
+      <end>\%{0@start}</end>
+      <include>
+        <context id="escaped-character" style-ref="escaped-character">
+          <match>\%{escaped-character}</match>
+        </context>
+        <context ref="line-continue"/>
+      </include>
+    </context>
+
+    <context id="char" style-ref="char">
+      <match>'(\%{escaped-character}|.)'</match>
+    </context>
+
+
+
+    <context id="radix" style-ref="radix">
+      <match extended="true">
+        (\b([0-9]+[Rr]+[0-9]+|
+            [0-9]+[Rr]+[a-zA-Z]))
+      </match>
+    </context>
+
+    <context id="real" style-ref="real">
+      <match extended="true">
+          [0-9]+ \. [0-9]+ ([eE][+-]?[0-9]+)?
+        | [0-9]+            [eE][+-]?[0-9]+
+      </match>
+    </context>
+
+    <context id="integer" style-ref="integer">
+      <match>[0-9]+</match>
+    </context>
+
+    <context id="preprocessor" style-ref="preprocessor">
+      <prefix>\$</prefix>
+      <keyword>define</keyword>
+      <keyword>else</keyword>
+      <keyword>elsif</keyword>
+      <keyword>encoding</keyword>
+      <keyword>endif</keyword>
+      <keyword>error</keyword>
+      <keyword>if</keyword>
+      <keyword>include</keyword>
+      <keyword>line</keyword>
+      <keyword>load</keyword>
+      <keyword>uload</keyword>
+      <keyword>undef</keyword>
+    </context>
+
+    <context id="builtin-keywords" style-ref="builtin-keywords">
+      <prefix>&amp;</prefix>
+      <keyword>ascii</keyword>
+      <keyword>break</keyword>
+      <keyword>clock</keyword>
+      <keyword>cset</keyword>
+      <keyword>current</keyword>
+      <keyword>date</keyword>
+      <keyword>dateline</keyword>
+      <keyword>digits</keyword>
+      <keyword>dump</keyword>
+      <keyword>errorcoexpr</keyword>
+      <keyword>errornumber</keyword>
+      <keyword>errortext</keyword>
+      <keyword>errorvalue</keyword>
+      <keyword>fail</keyword>
+      <keyword>features</keyword>
+      <keyword>file</keyword>
+      <keyword>handler</keyword>
+      <keyword>host</keyword>
+      <keyword>lcase</keyword>
+      <keyword>letters</keyword>
+      <keyword>level</keyword>
+      <keyword>line</keyword>
+      <keyword>main</keyword>
+      <keyword>maxlevel</keyword>
+      <keyword>no</keyword>
+      <keyword>null</keyword>
+      <keyword>pos</keyword>
+      <keyword>progname</keyword>
+      <keyword>random</keyword>
+      <keyword>source</keyword>
+      <keyword>subject</keyword>
+      <keyword>time</keyword>
+      <keyword>trace</keyword>
+      <keyword>ucase</keyword>
+      <keyword>uset</keyword>
+      <keyword>version</keyword>
+      <keyword>why</keyword>
+      <keyword>yes</keyword>
+    </context>
+
+    <context id="reserved-words" style-ref="reserved-words">
+      <keyword>abstract</keyword>
+      <keyword>break</keyword>
+      <keyword>by</keyword>
+      <keyword>case</keyword>
+      <keyword>class</keyword>
+      <keyword>const</keyword>
+      <keyword>create</keyword>
+      <keyword>default</keyword>
+      <keyword>do</keyword>
+      <keyword>else</keyword>
+      <keyword>end</keyword>
+      <keyword>every</keyword>
+      <keyword>fail</keyword>
+      <keyword>final</keyword>
+      <keyword>global</keyword>
+      <keyword>if</keyword>
+      <keyword>import</keyword>
+      <keyword>initial</keyword>
+      <keyword>invocable</keyword>
+      <keyword>link</keyword>
+      <keyword>local</keyword>
+      <keyword>native</keyword>
+      <keyword>next</keyword>
+      <keyword>not</keyword>
+      <keyword>of</keyword>
+      <keyword>optional</keyword>
+      <keyword>override</keyword>
+      <keyword>package</keyword>
+      <keyword>private</keyword>
+      <keyword>procedure</keyword>
+      <keyword>protected</keyword>
+      <keyword>public</keyword>
+      <keyword>readable</keyword>
+      <keyword>record</keyword>
+      <keyword>repeat</keyword>
+      <keyword>return</keyword>
+      <keyword>static</keyword>
+      <keyword>static</keyword>
+      <keyword>succeed</keyword>
+      <keyword>suspend</keyword>
+      <keyword>then</keyword>
+      <keyword>to</keyword>
+      <keyword>unless</keyword>
+      <keyword>until</keyword>
+      <keyword>while</keyword>
+    </context>
+
+    <context id="builtin-functions" style-ref="builtin-functions">
+      <keyword>abs</keyword>
+      <keyword>any</keyword>
+      <keyword>back</keyword>
+      <keyword>bal</keyword>
+      <keyword>center</keyword>
+      <keyword>char</keyword>
+      <keyword>classof</keyword>
+      <keyword>clear</keyword>
+      <keyword>coact</keyword>
+      <keyword>cocopy</keyword>
+      <keyword>cofail</keyword>
+      <keyword>collect</keyword>
+      <keyword>copy</keyword>
+      <keyword>cset</keyword>
+      <keyword>delay</keyword>
+      <keyword>delete</keyword>
+      <keyword>detab</keyword>
+      <keyword>display</keyword>
+      <keyword>entab</keyword>
+      <keyword>errorclear</keyword>
+      <keyword>exit</keyword>
+      <keyword>fatalerr</keyword>
+      <keyword>find</keyword>
+      <keyword>get</keyword>
+      <keyword>iand</keyword>
+      <keyword>icom</keyword>
+      <keyword>image</keyword>
+      <keyword>insert</keyword>
+      <keyword>integer</keyword>
+      <keyword>ior</keyword>
+      <keyword>is</keyword>
+      <keyword>ishift</keyword>
+      <keyword>ixor</keyword>
+      <keyword>key</keyword>
+      <keyword>keyof</keyword>
+      <keyword>keyval</keyword>
+      <keyword>left</keyword>
+      <keyword>list</keyword>
+      <keyword>many</keyword>
+      <keyword>map</keyword>
+      <keyword>match</keyword>
+      <keyword>max</keyword>
+      <keyword>member</keyword>
+      <keyword>min</keyword>
+      <keyword>move</keyword>
+      <keyword>numeric</keyword>
+      <keyword>ord</keyword>
+      <keyword>pop</keyword>
+      <keyword>pos</keyword>
+      <keyword>proc</keyword>
+      <keyword>pull</keyword>
+      <keyword>push</keyword>
+      <keyword>put</keyword>
+      <keyword>real</keyword>
+      <keyword>repl</keyword>
+      <keyword>reverse</keyword>
+      <keyword>right</keyword>
+      <keyword>runerr</keyword>
+      <keyword>seq</keyword>
+      <keyword>serial</keyword>
+      <keyword>set</keyword>
+      <keyword>sort</keyword>
+      <keyword>sortf</keyword>
+      <keyword>string</keyword>
+      <keyword>syserr</keyword>
+      <keyword>system</keyword>
+      <keyword>tab</keyword>
+      <keyword>table</keyword>
+      <keyword>text</keyword>
+      <keyword>trim</keyword>
+      <keyword>type</keyword>
+      <keyword>uchar</keyword>
+      <keyword>ucs</keyword>
+      <keyword>upto</keyword>
+      <keyword>weakref</keyword>
+      <keyword>weakrefval</keyword>
+    </context>
+
+    <context id="objecticon" class="no-spell-check">
+      <include>
+        <context ref="line-comment"/>
+        <context ref="string" />
+        <context ref="char" />
+        <context ref="radix" />
+        <context ref="real"/>
+        <context ref="integer" />
+        <context ref="preprocessor" />
+        <context ref="builtin-keywords" />
+        <context ref="reserved-words" />
+        <context ref="builtin-functions" />
+      </include>
+    </context>
+
+  </definitions>
+</language>
